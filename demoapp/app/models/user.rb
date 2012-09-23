@@ -1,4 +1,5 @@
 class User < ActiveRecord::Base
+  rolify 
   validates_presence_of :name
   validates_uniqueness_of :name, :email, :case_sensitive =>false
   # Include default devise modules. Others available are:
@@ -10,4 +11,6 @@ class User < ActiveRecord::Base
   # Setup accessible (or protected) attributes for your model
   attr_accessible :name, :email, :password, :password_confirmation, :remember_me, :confirmed_at
   # attr_accessible :title, :body
+  
+ 
 end
